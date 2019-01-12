@@ -22,11 +22,14 @@ Environment is ready and available at https://gym.openai.com/. Game is ‘LunarL
 
 2. Optimization and analysis
 
+Technique used in building software agent is known as Deep-Q learning or more generally deep reinforcement learning. More in: https://skymind.ai/wiki/deep-reinforcement-learning. 
+
 In order to find the best possible learning model for our software agent, we have employed a grid search for 
 the following parameters: discount rate (0.1; 0.5, 0.9); exploration decay (0.1; 0.5; 0.99) and rate (0.1; 0.5;0.9); learning rate (0.0001;0.01). 
 
 Agent is improved using best parameters from grid-search, and optimizing two neural net parameters – activation function (ReLU; LeakyReLU; Sigmoid) and number of nodes in hidden layers (6; 25; 50).
 
-3. Conclusions
+# Conclusions
 
-In this paper, Deep Q learning algorithm to train an agent in a discrete space was used. It was determined that it preformed best with base parameters, high exploration and exploration decay rates (0.8, 0.99); low learning rate (0.00025); high discount rate (0.9); 30 nodes in each of two hidden layers in action-value approximator, and ReLU activation functions. Understanding what agent does to land the Lunar Lander in the correct position, could be useful for modelling a real life drone or an experimental space rocket.
+In this paper, Deep Q learning algorithm to train an agent in a discrete space was used. It was determined that it preformed best with base parameters, high exploration and exploration decay rates (0.8, 0.99); low learning rate (0.00025); high discount rate (0.9); 30 nodes in each of two hidden layers in action-value approximator, and ReLU activation functions. Lander learns the policy which leads
+to sucessfull landing, however it takes significantly different number of iterations upon trying to replicate the results with similar hyper-parameters. It suggests high levels of randomness and importance of chance in exploration phase. 
